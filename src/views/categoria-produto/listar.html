@@ -17,11 +17,11 @@
                 <tbody>
                     {% for categoria in categorias %} 
                         <tr>
-                            <td>{{ categoria.id }}</td>
-                            <td>{{ categoria.descricao }}</td>
+                            <td>{{ categoria_produto.id }}</td>
+                            <td>{{ categoria_produto.descricao }}</td>
                             <td>
-                                <a href="/cliente/editar/{{cliente.id}}">Editar</a>
-                                <a href="/cliente/excluir/{{cliente.id}}">Excluir</a>
+                                <a href="/categoria-produto/editar/{{categoria_produto.id}}">Editar</a>
+                                <a href="/categoria-produto/excluir/{{categoria_produto.id}}">Excluir</a>
                             </td>
                         </tr>
                     {% endfor %}
