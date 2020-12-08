@@ -1,6 +1,6 @@
 const db = require('../db/connection')
 class ClienteController{
-
+      
     index(req,res){
         db.query('SELECT * FROM cliente',(err,result)=>{
             if(err){
