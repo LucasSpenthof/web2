@@ -1,6 +1,7 @@
 const express = require('express')
 const nunjucks = require('nunjucks')
 const clienteController = require('./src/controllers/ClienteController')
+const categoriaProdutoController = require('./src/controllers/CategoriaProdutoController')
 
 
 const app = express()
@@ -20,7 +21,7 @@ app.get('/',(req,res)=>{
 
 app.get('/categoria-produto/listar',categoriaProdutoController.index)
 app.get('/categoria-produto/adicionar',categoriaProdutoController.create)
-app.get('/categoria-produto/salvar',categoriaProdutoController.store)
+app.post('/categoria-produto/salvar',categoriaProdutoController.store)
 app.get('/categoria-produto/editar/:id',categoriaProdutoController.edit)
 app.post('/categoria-produto/atualizar',categoriaProdutoController.update)
 app.get('/categoria-produto/excluir/:id',categoriaProdutoController.delete)

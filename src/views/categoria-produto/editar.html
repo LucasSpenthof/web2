@@ -7,11 +7,11 @@
             <h3>Adicionar Categoria de Produto</h3>
         </header>
         <div class="card-body">
-            <form action="#" method="post"> 
-                <input type="hidden" name="id" value={{categoria_produto.id}}> 
+            <form action="/categoria-produto/atualizar" method="post"> 
+                <input type="hidden" name="id" value={{categoriasDeProduto.id}}> 
                 <div class="form-group">
                     <label>Descrição</label>
-                    <input type="text" value="{{categoria_produto.descricao}}" class="form-control">
+                    <input type="text" name="descricao" value="{{categoriasDeProduto.descricao}}" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-primary">Salvar</button>
             </form>

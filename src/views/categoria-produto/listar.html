@@ -15,13 +15,13 @@
                     <th>Ações</th>
                 </thead>
                 <tbody>
-                    {% for categoria in categorias %} 
+                    {% for categoria in categoriasDeProduto %} 
                         <tr>
-                            <td>{{ categoria_produto.id }}</td>
-                            <td>{{ categoria_produto.descricao }}</td>
+                            <td>{{ categoria.id }}</td>
+                            <td>{{ categoria.descricao }}</td>
                             <td>
-                                <a href="/categoria-produto/editar/{{categoria_produto.id}}">Editar</a>
-                                <a href="/categoria-produto/excluir/{{categoria_produto.id}}">Excluir</a>
+                                <a href="/categoria-produto/editar/{{categoria.id}}">Editar</a>
+                                <a href="/categoria-produto/excluir/{{categoria.id}}">Excluir</a>
                             </td>
                         </tr>
                     {% endfor %}
