@@ -1,7 +1,9 @@
 const express = require('express')
 const nunjucks = require('nunjucks')
 const clienteController = require('./src/controllers/ClienteController')
+const usuarioController = require('./src/controllers/UsuarioController')
 const categoriaProdutoController = require('./src/controllers/CategoriaProdutoController')
+const formaPagamentoController = require('./src/controllers/FormaPagamentoController')
 
 
 const app = express()
@@ -26,6 +28,12 @@ app.get('/categoria-produto/editar/:id',categoriaProdutoController.edit)
 app.post('/categoria-produto/atualizar',categoriaProdutoController.update)
 app.get('/categoria-produto/excluir/:id',categoriaProdutoController.delete)
 
+app.get('/forma-pagamento/listar',formaPagamentoController.index)
+app.get('/forma-pagamento/adicionar',formaPagamentoController.create)
+app.post('/forma-pagamento/salvar',formaPagamentoController.store)
+app.get('/forma-pagamento/editar/:id',formaPagamentoController.edit)
+app.post('/forma-pagamento/atualizar',formaPagamentoController.update)
+app.get('/forma-pagamento/excluir/:id',formaPagamentoController.delete)
 
 app.get('/cliente/listar',clienteController.index)
 app.get('/cliente/adicionar',clienteController.create)
@@ -33,6 +41,14 @@ app.post('/cliente/salvar',clienteController.store)
 app.get('/cliente/editar/:id',clienteController.edit)
 app.post('/cliente/atualizar',clienteController.update)
 app.get('/cliente/excluir/:id',clienteController.delete)
+
+app.get('/usuario/listar',usuarioController.index)
+app.get('/usuario/adicionar',usuarioController.create)
+app.post('/usuario/salvar',usuarioController.store)
+app.get('/usuario/editar/:id',usuarioController.edit)
+app.post('/usuario/atualizar',usuarioController.update)
+app.get('/usuario/excluir/:id',usuarioController.delete)
+
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
