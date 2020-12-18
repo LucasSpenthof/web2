@@ -34,7 +34,7 @@ class UsuarioController{
             if(err){
                 console.log(`houve um erro ao editar: ${err}`)
             }
-            res.render('usuario/editar',{usuarios:result.rows[0]})
+            res.render('usuario/editar',{usuario:result.rows[0]})
         })
     }
     update(req,res){
